@@ -36,7 +36,7 @@ export default function RandomColor() {
     }, [typeOfColor]);
 
     return <div className="py-3" style={{
-        width: '100vw',
+        width: '100%',
         height: '100vh',
         background: color,
     }}
