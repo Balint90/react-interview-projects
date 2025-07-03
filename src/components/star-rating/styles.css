@@ -1,0 +1,16 @@
+.star-rating {
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    display: flex;
+    margin: auto 0;
+    height: 50vh;
+}
+
+.active {
+    color: #fff700;
+}
+
+.rating {
+    cursor: pointer;
+}

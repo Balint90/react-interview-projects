@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import './styles.css';
 
 export default function RandomColor() {
 
@@ -33,15 +35,15 @@ export default function RandomColor() {
         else handleCreateRandomHEXColor();
     }, [typeOfColor]);
 
-    return <div style={{
+    return <div className="py-3" style={{
         width: '100vw',
         height: '100vh',
         background: color,
     }}
     >
-        <button onClick={() => setTypeOfColor('hex')}>Generate HEX Color</button>
-        <button onClick={() => setTypeOfColor('rgb')}>Generate RGB Color</button>
-        <button onClick={typeOfColor === 'hex' ? handleCreateRandomHEXColor : handleCreateRandomRGBColor}>Generate Random Color</button>
+        <button className="btn btn-secondary mx-2" onClick={() => setTypeOfColor('hex')}>Generate HEX Color</button>
+        <button className="btn btn-secondary mx-2" onClick={() => setTypeOfColor('rgb')}>Generate RGB Color</button>
+        <button className="btn btn-secondary mx-2" onClick={typeOfColor === 'hex' ? handleCreateRandomHEXColor : handleCreateRandomRGBColor}>Generate Random Color</button>
         <div style={{
             display: "flex",
             justifyContent: "center",
@@ -52,7 +54,7 @@ export default function RandomColor() {
             flexDirection: 'column',
             gap: '20px',
         }}>
-            <h3>{typeOfColor === 'rgb' ? 'RGB Color ' : 'HEX Color '}</h3>
+            <h1>{typeOfColor === 'rgb' ? 'RGB Color ' : 'HEX Color '}</h1>
             <h1>{color}</h1>
 
         </div>
