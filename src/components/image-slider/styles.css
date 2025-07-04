@@ -1,9 +1,14 @@
 .container {
+    width: 100%;
+    background-color: gray;
+}
+
+.image-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    width: 650px;
     height: 450px;
     -webkit-user-select: none;
     /* Safari */
@@ -11,7 +16,6 @@
     /* IE 10 and IE 11 */
     user-select: none;
     /* Standard syntax */
-
 }
 
 .current-image {

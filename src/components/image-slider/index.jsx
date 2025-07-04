@@ -49,32 +49,36 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
         return <div>Something went wrong! {errorMsg}</div>
     }
 
-    return <div className="container" style={{ height: '50vh', }
+    return <div class="container-fluid" style={{
+        display: "flex",
+        justifyContent: "center"
+    }}><div className="image-container" style={{ height: '50vh', }
     }>
-        <div>
-            <BsArrowLeftCircleFill onClick={handlePrevious} className="arrow arrow-left" />
-            {
-                images && images.length ?
-                    images.map((imageItem, index) => (
-                        <img
-                            key={imageItem.id}
-                            alt={imageItem.download_url}
-                            src={imageItem.download_url}
-                            className={currentSlide === index ? "current-image" : "current-image hide-current-image"} />
-                    ))
-                    :
-                    null
-            }
-            <BsArrowRightCircleFill onClick={handleNext} className="arrow arrow-right" />
-            <span className="circle-indicators">
-                {images && images.length ?
-                    images.map((_, index) => (
-                        <button key={index}
-                            onClick={() => setCurrentSlide(index)}
-                            className={"indicator " + (index === currentSlide ? 'current-indicator' : '')} ></button>
-                    ))
-                    : null}
-            </span>
-        </div>
-    </div >
+            <div>
+                <BsArrowLeftCircleFill onClick={handlePrevious} className="arrow arrow-left" />
+                {
+                    images && images.length ?
+                        images.map((imageItem, index) => (
+                            <img
+                                key={imageItem.id}
+                                alt={imageItem.download_url}
+                                src={imageItem.download_url}
+                                className={currentSlide === index ? "current-image" : "current-image hide-current-image"} />
+                        ))
+                        :
+                        null
+                }
+                <BsArrowRightCircleFill onClick={handleNext} className="arrow arrow-right" />
+                <span className="circle-indicators">
+                    {images && images.length ?
+                        images.map((_, index) => (
+                            <button key={index}
+                                onClick={() => setCurrentSlide(index)}
+                                className={"indicator " + (index === currentSlide ? 'current-indicator' : '')} ></button>
+                        ))
+                        : null}
+                </span>
+            </div>
+        </div >
+    </div>
 }
