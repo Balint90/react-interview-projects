@@ -6,6 +6,8 @@ import StarRating from './components/StarRating';
 import ImageSlider from './components/ImageSlider';
 import QrCodeGenerator from './components/QRCodeGenerator';
 import LoadMoreData from './components/LoadMoreData';
+import TreeView from './components/TreeView';
+import menus from './components/TreeView/data';
 
 function App() {
   return (
@@ -17,11 +19,13 @@ function App() {
       {/* Star Rating Component */}
       <StarRating />
       {/* Image Slider Component */}
-      <ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} page= {'1'} />
+      <ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} page={'1'} />
       {/* QRCode Generator Component */}
       <QrCodeGenerator />
       {/* Load more button */}
       <LoadMoreData />
+      {/* Tree View */}
+      <TreeView menus={menus} />
     </div>
   );
 }
