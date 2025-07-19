@@ -12,7 +12,7 @@ export default function QrCodeGenerator() {
         setQrCode(input);
     }
 
-    return <div className="container-fluid py-3" style={{ backgroundColor: "gray", }}>
+    return <div className="container-fluid py-3" style={{ bgcolor: "gray", }}>
         <h1>QR Code Generator</h1>
         <div>
             <input onChange={(e) => setInput(e.target.value)} type="text" name="qr-code" placeholder='QRCode' />
@@ -23,8 +23,8 @@ export default function QrCodeGenerator() {
                 id="qr-code-value"
                 value={qrCode}
                 size={400}
-                backgroundColor="#fff"
+                bgColor="#fff"
             />
         </div>
-    </div>
+    </div >
 }

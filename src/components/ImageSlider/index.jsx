@@ -49,7 +49,7 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
         return <div>Something went wrong! {errorMsg}</div>
     }
 
-    return <div class="container-fluid" style={{
+    return <div className="container-fluid" style={{
         display: "flex",
         justifyContent: "center"
     }}><div className="image-container" style={{ height: '50vh', }
