@@ -1,0 +1,26 @@
+:root {
+    --progress-bar-height: 5px;
+    --progress-bar-base-color: #afafaf;
+    --progress-bar-fill-color: #aaf900;
+}
+
+.top-container {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+}
+
+.scroll-progress-tracking-container {
+    width: 100%;
+    height: var(--progress-bar-height);
+    background: var(--progress-bar-base-color);
+}
+
+.current-progress-bar {
+    height: var(--progress-bar-height);
+    background: var(--progress-bar-fill-color);
+    width: 0%;
+}
