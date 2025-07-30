@@ -16,21 +16,21 @@ function App() {
   return (
     <div className="App">
       {/* Accordion component */}
-      {/* <Accordion /> */}
+      <Accordion />
       {/* Random color component */}
-      {/* <RandomColor /> */}
+      <RandomColor />
       {/* Star Rating Component */}
-      {/* <StarRating /> */}
+      <StarRating />
       {/* Image Slider Component */}
-      {/* <ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} page={'1'} /> */}
+      <ImageSlider url={'https://picsum.photos/v2/list'} limit={'10'} page={'1'} />
       {/* QRCode Generator Component */}
-      {/* <QrCodeGenerator /> */}
+      <QrCodeGenerator />
       {/* Load more button */}
-      {/* <LoadMoreData /> */}
+      <LoadMoreData />
       {/* Tree View */}
-      {/* <TreeView menus={menus} /> */}
+      <TreeView menus={menus} />
       {/* LightDarkMode */}
-      {/* <LightDarkMode /> */}
+      <LightDarkMode />
       {/* ScrollIndicator */}
       <ScrollIndicator url={'https://dummyjson.com/products?limit=100'} />
       {/* Custom Tabs Component */}
